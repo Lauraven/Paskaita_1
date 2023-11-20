@@ -1,0 +1,126 @@
+body {
+    font-family: "Open Sans",sans-serif;
+    color: black;
+}
+
+/*Linku, myktuku kodas*/
+a {
+    color: #7f14dd;
+    text-decoration: none;
+}  
+a:hover {
+    color: rgb(0, 234, 255);
+    text-decoration: none;
+}
+a:active {
+    color: rgb(16, 9, 207); /* Pakeičiama spalva, kai nuoroda yra paspaudžiama */
+}
+#Atlikti-darbai img:hover {
+    opacity: 40%; 
+}
+
+.skilties-pavadinimas{
+    font-family: "Open Sans", sans-serif;
+    color: darkblue;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-decoration: underline rgb(89, 178, 208);
+}
+
+
+/*Apie kodas*/
+#Apie h3{
+    line-height: 18px;
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #1265d8;
+    margin-bottom: 10px;
+}
+#Apie p{
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: sans-serif;
+    color: black;
+    padding-bottom: 20px;
+}
+
+
+/*Aprasymo kodas*/
+.Aprasymo-pavadinimas {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(13, 193, 169);
+}
+.Aprasymo-irankiai {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #bc26ca;
+    position: relative;
+}
+.Aprasymo-irankiai h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #1265d8;
+    padding-bottom: 20px;
+}
+.aprasas{
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: sans-serif;
+    color: black;
+    padding-bottom: 20px;
+}
+
+
+/*Atlikti darbai kodas*/
+#Atlikti-darbai {
+    background-color: #e0e7f0; /* Pakeiskite į norimą spalvą */
+    padding: 5px 5px 20px 2px;
+    border: 2px solid grey; 
+    padding: 10px; 
+    border-radius: 8px; 
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.image_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+    max-width: 600px;
+}
+.image_container img {
+    width: 240px; /* Užtikrina, kad paveikslėliai užpildytų visą stulpelį */
+    height: 240px; /* Taip išlaikoma nuotraukos proporcija */
+    max-width: 100%; 
+    margin-bottom: 10px;
+}
+
+
+/*Paslaugos kodas*/
+.klase1{
+    border: 2px solid grey; 
+    padding: 10px; 
+    border-radius: 8px; 
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+#Paslaugos h3{
+    line-height: 18px;
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #9312d8;
+    margin-bottom: 10px;
+}
