@@ -1,0 +1,41 @@
+@media print {
+    body {
+      font-family: serif; /*Serifinis sriftas*/
+      margin: 0px;
+    }
+    img {
+        display: block;
+        width: 240px;
+        page-break-before: auto;
+        page-break-after: auto;
+    }
+    /*.image_container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 15px;
+        max-width: 600px;
+    }*/
+    p, h1, h2, h3, h4, h5 {
+        page-break-inside: avoid;
+    }
+    h2{
+        page-break-after: avoid;
+    }
+    .skilties-pavadinimas{
+        page-break-inside: avoid;
+    }
+    /* paslepia video */
+    iframe, video, button {
+        visibility: hidden;
+        display: none;
+    }
+    #Paslaugos{
+        display: none;
+    }
+    /* parodo video prieiga */
+    .video-link {
+        visibility: visible;
+        display: block;
+        display: inline;
+    }
+}
