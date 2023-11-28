@@ -2,112 +2,452 @@ body {
     font-family: "Open Sans",sans-serif;
     color: black;
 }
-
 /*Linku, myktuku kodas*/
 a {
-    color: #7f14dd;
+    color: #149ddd;
     text-decoration: none;
 }  
-a:hover {
-    color: rgb(0, 234, 255);
+a:hover{
+    color: #37b3ed;
     text-decoration: none;
 }
 a:active {
     color: rgb(16, 9, 207); /* Pakeičiama spalva, kai nuoroda yra paspaudžiama */
 }
-#Atlikti-darbai img:hover {
+#portfolio img:hover {
     opacity: 40%; 
 }
-
-.skilties-pavadinimas{
-    font-family: "Open Sans", sans-serif;
-    color: darkblue;
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-decoration: underline rgb(89, 178, 208);
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Raleway", sans-serif;
 }
-
-
-/*Apie kodas*/
-#Apie h3{
-    line-height: 18px;
-    font-size: 19px;
+/*---------------------------------------------------------*/
+/*gristi i virsu mygtukas*/
+.back-to-top {
+position: fixed;
+visibility: hidden;
+opacity: 0;
+right: 15px;
+bottom: 15px;
+z-index: 996;
+background: #149ddd;
+width: 40px;
+height: 40px;
+border-radius: 50px;
+transition: all 0.4s;
+} 
+.back-to-top i {
+font-size: 28px;
+color: #fff;
+line-height: 0;
+}  
+.back-to-top:hover {
+background: #2eafec;
+color: #fff;
+} 
+.back-to-top.active {
+visibility: visible;
+opacity: 1;
+}
+/*---------------------------------------------------------*/
+/*---------------antraste------------------------------*/
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    transition: all ease-in-out 0.5s;
+    z-index: 9997;
+    transition: all 0.5s;
+    padding: 0 15px;
+    background: #040b14;
+    overflow-y: auto;
+} 
+#header .profile img {
+    margin: 15px auto;
+    display: block;
+    width: 120px;
+    border: 8px solid #2c2f3f;
+} 
+#header .profile h1 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
     font-weight: 600;
-    text-transform: uppercase;
+    -moz-text-align-last: center;
+    text-align-last: center;
     font-family: "Poppins", sans-serif;
-    color: #1265d8;
-    margin-bottom: 10px;
+} 
+/*Linku, myktuku kodas*/
+#header .profile h1 a, #header .profile h1 a:hover {
+  color: #fff;
+  text-decoration: none;
 }
-#Apie p{
+#header .profile .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #212431;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+#header .profile .social-links a:hover {
+    background-color: rgb(0, 234, 255);
+    color: #fff;
+    text-decoration: none;
+}  
+#header .profile .social-links a:active {
+    color: rgb(16, 9, 207); /* Pakeičiama spalva, kai nuoroda yra paspaudžiama*/ 
+}
+#main {
+    margin-left: 300px;
+}  
+.container,.container-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+/*---------------------------------------------------------*/
+/*---------------navigacinis meniu------------------------------*/
+.nav-menu {
+    padding: 30px 0 0 0;
+}
+.nav-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-menu>ul>li {
+    position: relative;
+    white-space: nowrap;
+}
+.nav-menu a, .nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  color: #a8a9b4;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+}
+.nav-menu a i, .nav-menu a:focus i {
+  font-size: 24px;
+  padding-right: 8px;
+  color: #6f7180;
+}
+.nav-menu a:hover, .nav-menu .active,
+.nav-menu .active:focus, .nav-menu li:hover>a {
+  text-decoration: none;
+  color: #fff;
+}
+.nav-menu a:hover i, .nav-menu .active i,
+.nav-menu .active:focus i, .nav-menu li:hover>a i {
+  color: #149ddd;
+}
+/* Mobili navigacija */
+.mobile-nav-toggle {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 9998;
+    border: 0;
+    font-size: 24px;
+    transition: all 0.4s;
+    outline: none !important;
+    background-color: #149ddd;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    border-radius: 50px;
+    cursor: pointer;
+}  
+.mobile-nav-active {
+    overflow: hidden;
+} 
+.mobile-nav-active #header {
+    left: 0;
+}
+/*---------------------------------------------------------*/
+/*---------------Pradzia------------------------------*/
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: url("Photo/sunflowers.jpg") top center;
+    background-size: cover;
+}  
+#hero:before {
+    content: "";
+    background: rgba(5, 13, 24, 0.3);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+#hero .hero-container {
+    position: relative;
+    z-index: 2;
+    min-width: 300px;
+}  
+#hero h1 {
+    margin: 0 0 10px 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+}  
+#hero p {
+    color: #fff;
+    margin-bottom: 50px;
+    font-size: 26px;
+    font-family: "Poppins", sans-serif;
+}  
+#hero p span {
+    color: #fff;
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #149ddd;
+}
+/*---------------------------------------------------------*/
+/*---------------Bendri nustatymai------------------------------*/
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}  
+.section-bg {
+    background: #f5f8fd;
+}
+.section-title {
+    padding-bottom: 30px;
+}  
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    position: relative;
+    color: #173b6c;
+} 
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #149ddd;
+    bottom: 0;
+    left: 0;
+}  
+.section-title p {
+    margin-bottom: 0;
+}
+/*---------------------------------------------------------*/
+/*---------------Apie------------------------------*/
+.about .content h3{
+    font-weight: 700;
+    font-size: 26px;
+    color: #173b6c
+}
+.about .content ul {
+    list-style: none;
+    padding: 0;
+}
+.about .content ul li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}  
+.about .content ul strong {
+    margin-right: 10px;
+}  
+.about .content ul i {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #149ddd;
+    line-height: 0;
+}  
+.about .content p:last-child {
+    margin-bottom: 0;
+}
+.about p{
     line-height: 18px;
     font-size: 18px;
     font-weight: normal;
-    font-family: sans-serif;
     color: black;
     padding-bottom: 20px;
 }
-
-
-/*Aprasymo kodas*/
-.Aprasymo-pavadinimas {
+/*---------------------------------------------------------*/
+/*---------------Aprasymo kodas------------------------------*/
+.resume .resume-title {
     font-size: 26px;
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: rgb(13, 193, 169);
+    color: #050d18;
 }
-.Aprasymo-irankiai {
+.resume .resume-item {
     padding: 0 0 20px 20px;
     margin-top: -2px;
-    border-left: 2px solid #bc26ca;
+    border-left: 2px solid #1f5297;
     position: relative;
 }
-.Aprasymo-irankiai h4 {
+.resume .resume-item h4 {
     line-height: 18px;
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
-    color: #1265d8;
-    padding-bottom: 20px;
+    color: #050d18;
+    padding-bottom: 10px;
 }
-.aprasas{
+.resume .resumes{
     line-height: 18px;
     font-size: 18px;
     font-weight: normal;
-    font-family: sans-serif;
     color: black;
     padding-bottom: 20px;
 }
-
-
-/*Atlikti darbai kodas*/
-#Atlikti-darbai {
-    background-color: #e0e7f0; /* Pakeiskite į norimą spalvą */
-    padding: 5px 5px 20px 2px;
-    border: 2px solid grey; 
-    padding: 10px; 
-    border-radius: 8px; 
-    margin-bottom: 20px;
-    margin-top: 20px;
+.resume .resume-item h5 {
+    font-size: 16px;
+    background: #e4edf9;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
-.image_container {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 15px;
-    max-width: 600px;
+.resume .resume-item ul {
+    padding-left: 20px;
+}  
+.resume .resume-item ul li {
+    padding-bottom: 10px;
+}  
+.resume .resume-item:last-child {
+    padding-bottom: 0;
+} 
+.resume .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: #fff;
+    border: 2px solid #1f5297;
 }
-.image_container img {
-    width: 240px; /* Užtikrina, kad paveikslėliai užpildytų visą stulpelį */
+.resume p{
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: normal;
+    color: black;
+    padding-bottom: 20px;
+}
+/*---------------------------------------------------------*/
+/*---------------Atlikti darbai------------------------------*/
+.portfolio .portfolio-item {
+    margin-bottom: 30px;
+}
+.portfolio #portfolio-flters {
+    padding: 0;
+    margin: 0 auto 35px auto;
+    list-style: none;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 50px;
+    padding: 2px 15px;
+} 
+.portfolio #portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 15px 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #272829;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+    color: #149ddd;
+}
+.portfolio #portfolio-flters li:last-child {
+    margin-right: 0;
+}
+.portfolio .portfolio-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.portfolio .portfolio-wrap::before {
+    content: "";
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 0;
+}
+.portfolio .portfolio-wrap .portfolio-links {
+    opacity: 1;
+    left: 0;
+    right: 0;
+    bottom: -60px;
+    z-index: 3;
+    position: absolute;
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    justify-content: center;
+}
+.portfolio .portfolio-wrap .portfolio-links a {
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    background: rgba(20, 157, 221, 0.75);
+    transition: 0.3s;
+    width: 50%;
+}
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+    background: rgba(20, 157, 221, 0.95);
+}  
+.portfolio .portfolio-wrap .portfolio-links a+a {
+    border-left: 1px solid #37b3ed;
+}  
+.portfolio .portfolio-wrap:hover::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+}  
+.portfolio .portfolio-wrap:hover .portfolio-links {
+    opacity: 1;
+    bottom: 0;
+}
+.portfolio-wrap img {
     height: 240px; /* Taip išlaikoma nuotraukos proporcija */
     max-width: 100%; 
     margin-bottom: 10px;
 }
 
 
-/*Paslaugos kodas*/
+/*---------------------------------------------------------*/
+/*---------------Paslaugos------------------------------*/
 .klase1{
     border: 2px solid grey; 
     padding: 10px; 
@@ -115,12 +455,42 @@ a:active {
     margin-bottom: 20px;
     margin-top: 20px;
   }
-#Paslaugos h3{
+#services h3{
     line-height: 18px;
     font-size: 19px;
     font-weight: 600;
     text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
     color: #9312d8;
     margin-bottom: 10px;
+}
+button{
+    width: 35%;
+    background-color: #5e4caf;
+    color: white;
+    padding: 8px 10px;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+button:hover {
+    background-color: rgb(0, 234, 255);
+    text-decoration: none;
+}
+button:active {
+    background-color: rgb(16, 9, 207); /* Pakeičiama spalva, kai nuoroda yra paspaudžiama */
+}
+.video-link{
+    display: none;
+}
+/*---------------------------------------------------------*/
+/*---------------Poraste------------------------------*/ 
+#footer {
+    padding: 40px 0;
+    background-color: grey;
+}  
+.social-links-footer a {
+    font-size: 24px;
+    margin-right: 15px;
+    color: #fff;
 }

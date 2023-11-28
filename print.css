@@ -9,19 +9,13 @@
         page-break-before: auto;
         page-break-after: auto;
     }
-    /*.image_container {
-        display: grid;
-        grid-template-columns: auto;
-        grid-gap: 15px;
-        max-width: 600px;
-    }*/
     p, h1, h2, h3, h4, h5 {
         page-break-inside: avoid;
     }
     h2{
         page-break-after: avoid;
     }
-    .skilties-pavadinimas{
+    .section-title{
         page-break-inside: avoid;
     }
     /* paslepia video */
@@ -29,7 +23,7 @@
         visibility: hidden;
         display: none;
     }
-    #Paslaugos{
+    #services{
         display: none;
     }
     /* parodo video prieiga */
@@ -37,5 +31,41 @@
         visibility: visible;
         display: block;
         display: inline;
+    }
+}
+@media (max-width: 1199px) {
+    #header {
+      left: -300px;
+    }
+    #main {
+      margin-left: 0;
+    }
+    .container,
+    .container-fluid {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+}
+@media (min-width: 1024px) {
+    #hero {
+      background-attachment: fixed;
+    }
+}  
+@media (max-width: 768px) {
+    #hero h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    #hero h2 {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+}
+@media (max-width: 1199px) {
+    #footer {
+      position: static;
+      width: auto;
+      padding-right: 20px 15px;
     }
 }
