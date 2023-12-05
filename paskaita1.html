@@ -14,6 +14,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <style>
+      math {
+          font-size: 50px; /* Keičiama šrifto dydis */
+      }
+      mo.integral {
+          font-size: 100px; /* Keičiama integralo simbolio dydis */
+      }
+  </style>
 
     <link href="Photo/dark-mode-icon.webp" rel="icon">
     <link href="Photo/night-mode-1.png" rel="moon-icon">
@@ -223,8 +231,89 @@
           Your browser does not support the audio element.
         </audio>
       </div>
+    <p>
+        Formule
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>a</mi>
+            <mo stretchy="false">)</mo>
+            <mo>=</mo>
+                <mrow>
+                    <mfrac>
+                        <mi>1</mi>
+                        <mn>
+                            <mrow>
+                                <mn>2</mn>
+                                <mi>&#x03C0;</mi>
+                                <mi>i</mi>
+                            </mrow>  
+                        </mn>
+                    </mfrac>
+                </mrow>
+                <mo class="integral">&#x222E;</mo>
+                <mrow>
+                    <mfrac>
+                        <mrow>
+                            <mi>f</mi>
+                            <mo>(</mo>
+                            <mi>z</mi>
+                            <mo>)</mo>
+                        </mrow>
+                        <mn>
+                            <mrow>
+                                <mo>(</mo>
+                                <mi>z</mi>
+                                <mo>-</mo>
+                                <mi>a</mi>
+                                <mo>)</mo>
+                            </mrow>  
+                        </mn>
+                    </mfrac>
+                </mrow>
+                <mspace depth="1ex" height="1ex" width="1ex"/>
+                <mi>d</mi>
+                <mi>z</mi>
+        </math>
+    </p>
+    <svg width="100%" height="300px">
+        <g id="R1" transform="translate(250 250)"> 
+          <ellipse rx="100" ry="0" opacity=".3">
+          <animateTransform attributeName="transform" type="rotate" dur="7s" from="0" to="360" repeatCount="indefinite" />
+          <animate attributeName="cx" dur="8s" values="-20; 220; -20" repeatCount="indefinite" />
+          <animate attributeName="ry" dur="3s" values="10; 60; 10" repeatCount="indefinite" />
+          </ellipse>
+        </g>
+        <use xlink:href="#R1" transform="rotate(72 390 150)" />
+        <use xlink:href="#R1" transform="rotate(144 390 150)" />
+        <use xlink:href="#R1" transform="rotate(216 390 150)" />
+        <use xlink:href="#R1" transform="rotate(288 390 150)" />
+    </svg>    
+    
+    <div class="m">
+      <div class="upper-band-shape"></div>
+      <div class="side-small-button"></div>
+      <div class="side-small-button"></div>
+      <div class="lower-band-shape"></div>
+      <div class="clock" id="clock">
+          <span style="--i:1;"><b>1</b></span>
+          <span style="--i:2;"><b>2</b></span>
+          <span style="--i:3;"><b>3</b></span>
+          <span style="--i:4;"><b>4</b></span>
+          <span style="--i:5;"><b>5</b></span>
+          <span style="--i:6;"><b>6</b></span>
+          <span style="--i:7;"><b>7</b></span>
+          <span style="--i:8;"><b>8</b></span>
+          <span style="--i:9;"><b>9</b></span>
+          <span style="--i:10;"><b>10</b></span>
+          <span style="--i:11;"><b>11</b></span>
+          <span style="--i:12;"><b>12</b></span>
+          <div class="hour-hand" id="hour-hand"></div>
+          <div class="minute-hand" id="minute-hand"></div>
+          <div class="second-hand" id="second-hand"></div>
+          <div class="center-dot"></div>
+      </div>
     </section>
-  
     <!-- ======= Poraste ======= -->
     <footer id="footer" style="background-color: black; color: #fff;">
       <div class="container">
@@ -259,5 +348,9 @@
     </footer>
    </main>
    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
